@@ -1,5 +1,4 @@
-# robofriends
-Tutorial for udemy course - React + Redux
+# exchange-rate
 
 To run the project:
 
