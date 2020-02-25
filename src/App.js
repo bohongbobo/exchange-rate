@@ -4,10 +4,6 @@ import "./App.css";
 import Exchange from "./Exchange";
 
 class App extends Component {
-  state = {
-    currency: ""
-  };
-
   render() {
     return (
       <div className="App">

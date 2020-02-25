@@ -32,15 +32,13 @@ export default class Exchange extends Component {
     });
   };
 
-  async componentDidMount() {
-    console.log("aaa");
-
+  componentDidMount() {
     fetch(`https://api.exchangerate-api.com/v4/latest/${this.state.c1}`)
       .then(response => response.json())
       .then(data => this.setState({ amount2: data.rates[this.state.c2] }));
   }
 
-  async componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps, prevState) {
     // only update chart if the data has changed
     if (prevState !== this.state) {
       fetch(`https://api.exchangerate-api.com/v4/latest/${this.state.c1}`)
