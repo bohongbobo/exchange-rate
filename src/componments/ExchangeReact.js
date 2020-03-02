@@ -52,11 +52,13 @@ export default class Exchange extends Component {
   }
 
   render() {
+    const { c1, c2 } = this.state;
     return (
       <div>
-        <select onChange={this.setCurrency1} id="currency-one">
-          <option value="USD">{this.state.c1}</option>
-          <option value="CNY">{this.state.c2}</option>
+        <h1>React without Redux blow</h1>
+        <select onChange={this.setCurrency1} id="currency-one" value={c1}>
+          <option value="USD">USD</option>
+          <option value="CNY">CNY</option>
         </select>
         <input
           type="number"
@@ -71,9 +73,9 @@ export default class Exchange extends Component {
           </button>
           <div className="rate" id="rate"></div>
         </div>
-        <select onChange={this.setCurrency2} id="currency-one">
-          <option value="CNY">{this.state.c2}</option>
-          <option value="USD">{this.state.c1}</option>
+        <select onChange={this.setCurrency2} id="currency-one" value={c2}>
+          <option value="CNY">CNY</option>
+          <option value="USD">USD</option>
         </select>
         {/* {this.state.amount1},
                 {this.state.amount2} */}
